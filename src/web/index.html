@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tasks</h1>
+      <nav><a href="index.html" aria-current="page">All</a> <a href="tags.html">By tag</a></nav>
+    </header>
+    <main>
+      <form id="add" autocomplete="off">
+        <label>Title <input name="title" required maxlength="200" /></label>
+        <label>Priority
+          <select name="priority">
+            <option value="low">Low</option>
+            <option value="normal" selected>Normal</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label>Due <input name="due" type="date" /></label>
+        <label>Tags <input name="tags" placeholder="comma separated" /></label>
+        <button type="submit">Add task</button>
+      </form>
+      <p id="summary" role="status"></p>
+      <ul id="list"></ul>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

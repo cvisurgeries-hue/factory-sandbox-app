@@ -1,0 +1,111 @@
+:root {
+  --bg: #fafaf9;
+  --fg: #1c1917;
+  --muted: #78716c;
+  --accent: #2563eb;
+  --danger: #dc2626;
+  --border: #e7e5e4;
+  font-family: system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+nav a {
+  color: var(--accent);
+  margin-left: 12px;
+}
+
+nav a[aria-current="page"] {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li label {
+  flex-direction: row;
+  gap: 6px;
+  color: var(--fg);
+  flex: 1;
+}
+
+li.done label {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+li.overdue .due {
+  color: var(--danger);
+}
+
+.priority.high {
+  color: var(--danger);
+}
+
+.tags em {
+  font-style: normal;
+  background: var(--border);
+  border-radius: 4px;
+  padding: 0 6px;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}

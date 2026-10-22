@@ -1,0 +1,16 @@
+{
+  "name": "factory-sandbox-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small task-list web app that the software factory works on during live checks.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist 4173"
+  }
+}
